@@ -15,7 +15,9 @@ TestAircraft = NewAircraft(
     airspeed=502,
     mach=GetMach(502),
     latitude=51.75723,
-    longitude=-0.28253
+    longitude=-0.28253,
+    heading="n/a"
+    status="in-flight"
 )
 
 print(TestAircraft)
