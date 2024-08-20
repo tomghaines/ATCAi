@@ -47,3 +47,4 @@ class NewAircraft:
     mach: int
     latitude: float
     longitude: float
+    status: str
