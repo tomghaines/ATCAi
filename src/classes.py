@@ -35,7 +35,6 @@ class NewAirspace:
     elevation: float
 
 # Aircraft
-
 @dataclass
 class NewAircraft:
     aircraft_type: str
@@ -45,6 +44,6 @@ class NewAircraft:
     track: int
     ground_speed: int
     airspeed: int
-    mach: float
+    mach: int
     latitude: float
     longitude: float
