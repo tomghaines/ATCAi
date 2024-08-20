@@ -1,19 +1,22 @@
-class AltBand:
-    def __init__(self, min_alt, max_alt):
-        self.min_alt = min_alt
-        self.max_alt = max_alt
+from dataclasses import dataclass
 
+@dataclass
+class AltitudeBand:
+    min_alt: float
+    max_alt: float
+
+@dataclass
 class AltitudeBands:
-    def __init__(self, alt_band_low, alt_band_mid, alt_band_high):
-        self.alt_band_low = alt_band_low
-        self.alt_band_mid = alt_band_mid
-        self.alt_band_high = alt_band_high
+    alt_band_low: AltitudeBand
+    alt_band_mid: AltitudeBand
+    alt_band_high: AltitudeBand
 
+@dataclass
 class NewAirspace:
-    def __init__(self, name, length, width, height, alt, alt_bands):
-        self.name = name
-        self.length = length
-        self.width = width
-        self.height = height
-        self.alt = alt
-        self.alt_bands = alt_bands
+    name: str
+    lat: float
+    long: float
+    alt: float
+    alt_bands: AltitudeBands
+
+    
