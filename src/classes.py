@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from typing import Tuple
 
 # Airspace
 @dataclass
@@ -7,10 +8,10 @@ class NewAirspace:
     lat: float
     long: float
     alt: float
-    runway: Runway
-    coordinates: str
-    elevation: str
     alt_bands: AltitudeBands
+    runway: Tuple[NewRunway, NewRunway, NewRunway, NewRunway]
+    coordinates: str
+    elevation: float
 
 # Altitude Bands:
 @dataclass
@@ -26,11 +27,11 @@ class AltitudeBand:
 
 # Runway
 @dataclass
-class Runway:
+class NewRunway:
     name: str
     dimentions: str
     surface: str
     coordinates: str
-    elevation: int
+    elevation: float
     runway_heading: float
     displaced_threshold: int
