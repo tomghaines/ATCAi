@@ -39,12 +39,12 @@ class NewAirspace:
 class NewAircraft:
     aircraft_type: str
     registration: str
-    barometric_altitude: int
-    GPS_altitude: int
     track: int
-    ground_speed: int
-    airspeed: int
-    mach: int
-    latitude: float
-    longitude: float
+    airspeed: float
+    ground_speed: float
+    mach: float
+    current_lat: float
+    current_long: float
+    current_alt: float
+    heading: float
     status: str
