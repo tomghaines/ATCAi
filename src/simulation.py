@@ -1,4 +1,5 @@
-from test_airspace import test_aircraft
+from test_airspace import heathrow_airspace, test_aircraft
+import math
 
 class Simulation:
     def __init__(self, airspace, aircraft):
