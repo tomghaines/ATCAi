@@ -43,6 +43,15 @@ class Simulation:
 
         self.aircraft.status = "in-flight"
         print(f"Aircraft {self.aircraft.aircraft_type} has reached cruising altitude, status: {self.aircraft.status}")
+    
+    def simulate_arrival(self):
+        self.aircraft.status = "arriving"
+        while self.aircraft.current_alt > 0:
+            self.aircraft.update_position(time_elapsed=1) # 1 unit of time
+            self.aircraft.update_altitude(rate_of_climb_or_decent=-3000, time_elapsed=1) # 3000 ft/min decent
+            print(f"Aircraft {self.aircraft.aircraft_type} arriving, current altitude: {self.aircraft.current_alt}")
+        
+        self.aircraft.status = "on-ground"
 
 simulation = Simulation(TestAirspace, TestAircraft)
 simulation.simulate_departure()
