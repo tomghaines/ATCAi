@@ -26,5 +26,3 @@ TestAirspace = NewAirspace(
     coordinates="N51°28.65' / W0°27.68'",
     elevation=83.0
 )
-
-print(TestAirspace)
