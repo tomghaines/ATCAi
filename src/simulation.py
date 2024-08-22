@@ -24,4 +24,5 @@ class NewAircraft:
         self.current_lat += delta_lat
         self.current_long += delta_long
 
-    
+    def update_altitude(self, rate_of_climb_or_decent: float, time_elapsed: float):
+        self.current_alt += rate_of_climb_or_decent * time_elapsed
