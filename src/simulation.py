@@ -23,3 +23,5 @@ class NewAircraft:
 
         self.current_lat += delta_lat
         self.current_long += delta_long
+
+    
