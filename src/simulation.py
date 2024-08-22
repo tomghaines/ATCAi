@@ -18,7 +18,7 @@ class NewAircraft:
     
     def update_position(self, time_elapsed: float):
         distance_traveled = self.ground_speed * time_elapsed
-        delta_lat = distanced_traveled * math.cos(math.radians(self.heading))
+        delta_lat = distance_traveled * math.cos(math.radians(self.heading))
         delta_long = distance_traveled * math.sin(math.radians(self.heading))
 
         self.current_lat += delta_lat
@@ -39,7 +39,7 @@ class Simulation:
             self.aircraft.update_altitude(rate_of_climb_or_decent=3000/60, time_elapsed=1) # 3000 ft/min, converted to ft/second
 
             # Output the current state
-            print(f"Aircraft {self/aircraft.aircraft_type} departing, current altitude: {self.current_alt:.2f} feet, position: ({self.aircraft.current_lat:.4f}, {self.aircraft.current_long:.4f})")
+            print(f"Aircraft {self.aircraft.aircraft_type} departing, current altitude: {self.current_alt:.2f} feet, position: ({self.aircraft.current_lat:.4f}, {self.aircraft.current_long:.4f})")
 
         self.aircraft.status = "in-flight"
         print(f"Aircraft {self.aircraft.aircraft_type} has reached cruising altitude, status: {self.aircraft.status}")
@@ -54,4 +54,6 @@ class Simulation:
         self.aircraft.status = "on-ground"
 
 simulation = Simulation(TestAirspace, TestAircraft)
+
 simulation.simulate_departure()
+simulation.simulate_arrival()
