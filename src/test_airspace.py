@@ -47,6 +47,18 @@ runway_four = NewRunway(
     displaced_threshold=1010
 )
 
+# Define airspace
+heathrow_airspace = NewAirspace(
+    name="HEATHROW",
+    lat=51.4706,
+    long=-0.461941,
+    alt=83.0,
+    alt_bands=alt_bands,
+    runway=(runway_one, runway_two, runway_three, runway_four),
+    coordinates="N51°28.65' / W0°27.68'",
+    elevation=83.0
+)
+
 
 # Define an aircraft
 def get_mach(v):
