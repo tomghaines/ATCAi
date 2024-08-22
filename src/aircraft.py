@@ -8,16 +8,13 @@ def GetMach(v):
 TestAircraft = NewAircraft(
     aircraft_type="Boeing 737 MAX 8-200 (B38M)",
     registration="EI-IHT",
-    barometric_altitude=37000,
-    GPS_altitude=37000,
+    current_alt=37000,
     track=77,
     ground_speed=502,
     airspeed=502,
     mach=GetMach(502),
-    latitude=51.75723,
-    longitude=-0.28253,
-    heading="n/a",
-    status="in-flight"
+    current_lat=51.75723,
+    current_long=-0.28253,
+    heading="",
+    status="on-ground"
 )
-
-print(TestAircraft)
