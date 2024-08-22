@@ -43,3 +43,6 @@ class Simulation:
 
         self.aircraft.status = "in-flight"
         print(f"Aircraft {self.aircraft.aircraft_type} has reached cruising altitude, status: {self.aircraft.status}")
+
+simulation = Simulation(TestAirspace, TestAircraft)
+simulation.simulate_departure()
