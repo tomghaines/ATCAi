@@ -1,3 +1,5 @@
+from classes import AltitudeBand, AltitudeBands, NewAirspace, NewRunway, NewAircraft
+
 # Define altitude bands
 alt_b_low = AltitudeBand(min_alt=0, max_alt=50)
 alt_b_mid = AltitudeBand(min_alt=50, max_alt=250)
